@@ -10,7 +10,7 @@ Il pagamento avviene con la carta di credito, che non deve essere scaduta.
 class Product
 {
     protected bool $available;
-    protected int $price;
+    protected float $price;
     protected string $brand;
     protected string $name;
 
