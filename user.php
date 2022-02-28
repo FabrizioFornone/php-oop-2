@@ -4,15 +4,15 @@ class User
 {
     protected string $name;
     protected string $surname;
-    protected bool $isRegistered;
+    protected bool $isRegistered = false;
     protected string $id;
 
     function __construct($_name, $_surname, $_isRegistered, $_id)
     {
         $this->setName($_name);
-        $this->setName($_surname);
-        $this->setName($_isRegistered);
-        $this->setName($_id);
+        $this->setSurname($_surname);
+        $this->setIsRegistered($_isRegistered);
+        $this->setId($_id);
     }
 
 
@@ -52,6 +52,25 @@ class User
     public function setSurname($surname)
     {
         $this->surname = $surname;
+
+        return $this;
+    }
+    /**
+     * Get the value of isRegistered
+     */
+    public function getIsRegistered()
+    {
+        return $this->isRegistered;
+    }
+
+    /**
+     * Set the value of isRegistered
+     *
+     * @return  self
+     */
+    public function setIsRegistered($isRegistered)
+    {
+        $this->isRegistered = $isRegistered;
 
         return $this;
     }
