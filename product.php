@@ -14,9 +14,17 @@ class Product
     protected string $brand;
     protected string $name;
 
+    function __construct(bool $_available, float $_price, string $_brand, string $_name)
+    {
+        $this->setAvailable($_available);
+        $this->setPrice($_price);
+        $this->setBrand($_brand);
+        $this->setName($_name);
+    }
+
     /**
      * Get the value of available
-     */ 
+     */
     public function getAvailable()
     {
         return $this->available;
@@ -26,7 +34,7 @@ class Product
      * Set the value of available
      *
      * @return  self
-     */ 
+     */
     public function setAvailable($available)
     {
         $this->available = $available;
@@ -36,7 +44,7 @@ class Product
 
     /**
      * Get the value of price
-     */ 
+     */
     public function getPrice()
     {
         return $this->price;
@@ -46,7 +54,7 @@ class Product
      * Set the value of price
      *
      * @return  self
-     */ 
+     */
     public function setPrice($price)
     {
         $this->price = $price;
@@ -56,7 +64,7 @@ class Product
 
     /**
      * Get the value of brand
-     */ 
+     */
     public function getBrand()
     {
         return $this->brand;
@@ -66,7 +74,7 @@ class Product
      * Set the value of brand
      *
      * @return  self
-     */ 
+     */
     public function setBrand($brand)
     {
         $this->brand = $brand;
@@ -76,7 +84,7 @@ class Product
 
     /**
      * Get the value of name
-     */ 
+     */
     public function getName()
     {
         return $this->name;
@@ -86,7 +94,7 @@ class Product
      * Set the value of name
      *
      * @return  self
-     */ 
+     */
     public function setName($name)
     {
         $this->name = $name;

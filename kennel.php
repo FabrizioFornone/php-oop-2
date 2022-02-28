@@ -6,12 +6,9 @@ class Kennel extends Product
     protected float $weight;
     protected string $dimensions;
 
-    function __construct($_available, $_price, $_brand, $_name, $_weight, $_dimensions)
+    function __construct(bool $_available, float $_price, string $_brand, string $_name, float $_weight, string $_dimensions)
     {
-        $this->available = $_available;
-        $this->price = $_price;
-        $this->brand = $_brand;
-        $this->name = $_name;
+        parent::__construct($_available, $_price, $_brand, $_name);
 
         $this->setWeight($_weight);
         $this->setDimensions($_dimensions);

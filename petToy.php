@@ -5,12 +5,9 @@ class PetToy extends Product
 {
     protected string $material;
 
-    function __construct($_available, $_price, $_brand, $_name, $_material)
+    function __construct(bool $_available, float $_price, string $_brand, string $_name, string $_material)
     {
-        $this->available = $_available;
-        $this->price = $_price;
-        $this->brand = $_brand;
-        $this->name = $_name;
+        parent::__construct($_available, $_price, $_brand, $_name);
 
         $this->setMaterial($_material);
     }

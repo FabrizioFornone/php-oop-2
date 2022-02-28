@@ -5,12 +5,9 @@ class CannedFood extends Product
 {
     protected string $type;
 
-    function __construct($_available, $_price, $_brand, $_name, $_type)
+    function __construct(bool $_available, float $_price, string $_brand, string $_name, string $_type)
     {
-        $this->available = $_available;
-        $this->price = $_price;
-        $this->brand = $_brand;
-        $this->name = $_name;
+       parent::__construct($_available, $_price, $_brand, $_name);
 
         $this->setType($_type);
     }
