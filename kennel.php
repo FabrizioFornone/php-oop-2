@@ -1,6 +1,7 @@
 <?php
 require_once './product.php';
 
+
 class Kennel extends Product
 {
     protected float $weight;
