@@ -8,7 +8,7 @@ class CannedFood extends Product
     function __construct($_type)
     {
         $this->available = true;
-        $this->price = 35.33;
+        $this->price = 34.63;
         $this->brand = 'Monge';
         $this->name = 'Fresh Puppy';
 
@@ -36,6 +36,3 @@ class CannedFood extends Product
     }
 }
 
-$meatCannedFood = new CannedFood('Meat');
-
-var_dump($meatCannedFood);
