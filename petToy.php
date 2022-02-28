@@ -1,11 +1,11 @@
 <?php
 require_once './product.php';
 
-class PetToys extends Product
+class PetToy extends Product
 {
     protected string $material;
 
-    function __construct($_material, $_available, $_price, $_brand, $_name)
+    function __construct($_available, $_price, $_brand, $_name, $_material)
     {
         $this->available = $_available;
         $this->price = $_price;
